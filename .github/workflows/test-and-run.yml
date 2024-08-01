@@ -12,9 +12,9 @@ jobs:
       packages: read
       contents: read
     steps:
-      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
 
-      - uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20
+      - uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -36,9 +36,9 @@ jobs:
       packages: read
       contents: read
     steps:
-      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
 
-      - uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20
+      - uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -76,7 +76,7 @@ jobs:
         id: ghapi
 
       - name: report result
-        uses: sarisia/actions-status-discord@6712a17f7d0531d44cd42ca2a878b0bdfd07b62a
+        uses: sarisia/actions-status-discord@448a59224349c2bf9611e68b88787f2b0011965f
         if: always()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
